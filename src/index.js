@@ -8,9 +8,8 @@ const description = document.querySelector("#descripcion-items");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  var total = totalGlobal(cant.value,price.value,state.value);
+  
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + "El precio final a pagar es :" +total + "</p>";
 });
